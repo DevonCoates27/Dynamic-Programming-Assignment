@@ -12,6 +12,10 @@ int main(int argc, char *argv[])
 {
    ifstream ifile(argv[1]);
 
+   if(!ifile.is_open()){
+      std::cout << "File failed to open" << std::endl;
+   }
+
    int N, E, M;
    ifile >> N >> E >> M;
    float *prob[N];
